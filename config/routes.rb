@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   get 'restaurants/:id/edit', to: 'restaurants#edit', as: :edit_restaurant
   patch 'restaurants/:id', to: 'restaurants#update'
   delete 'restaurants/:id', to: 'restaurants#destroy'
+  # Another way:
+  # resources :restaurants
+  # Or a subset:
+  # resources :restaurants, only: [:create, :index, :destroy]
 end
